@@ -33,6 +33,20 @@ class HairBookingApp:
 def main():
     app = HairBookingApp()
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     main()
+
+       self.wash_var = IntVar()
+       self.payment_var = StringVar()
+       self.rating_var = IntVar()
+    
+
+       Checkbutton(self.main_window, text="Include Wash", variable=self.wash_var).pack()
+       Label(self.main_window, text="Payment").pack()
+       Radiobutton(self.main_window, text="Cash", variable=self.payment_var, value="Cash").pack()
+       Radiobutton(self.main_window, text="Card", variable=self.payment_var, value="Card").pack()
+
+       Label(self.main_window, text="Rating").pack()
+       Scale(self.main_window, from_=1, to=10, orient=HORIZONTAL, variable=self.rating_var).pack()
+
 
